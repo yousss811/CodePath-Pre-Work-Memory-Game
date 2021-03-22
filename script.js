@@ -5,10 +5,10 @@ const CLUE_HOLD_TIME = 500;
 const CLUE_PAUSE_TIME = 333; 
 const NEXT_CLUE_WAIT_TIME = 500;
 const STRIKE_LIMIT = 3; 
-const NUM_DIFFICULTIES = 3;
+const NUM_BUTTONS = 4;
 
 var pattern;
-var patternLen = 4;
+var patternLen = 8;
 var progress = 0; 
 var gamePlaying = false;
 var guessCounter = 0; 
@@ -25,12 +25,14 @@ function clearButton(btn){
 }
 
 function generatePattern(){
+  pattern = []
   for(let i = 0; i < patternLen; i++){
-    
+    pattern.push(Math.floor(Math.random() * (NUM_BUTTONS - 1) + 1));
   }
 }
 
 function changeDifficultyEasy(){
+  if(gamePlaying){return;}
   patternLen = 4; 
   
   document.getElementById('mediumBtn').classList.remove("lit");
@@ -39,6 +41,7 @@ function changeDifficultyEasy(){
   document.getElementById('easyBtn').classList.add("lit");
 }
 function changeDifficultyMedium(){
+  if(gamePlaying){return;}
   patternLen = 8; 
   
   document.getElementById("easyBtn").classList.remove("lit");
@@ -47,6 +50,7 @@ function changeDifficultyMedium(){
   document.getElementById('mediumBtn').classList.add("lit");
 }
 function changeDifficultyHard(){
+  if(gamePlaying){return;}
   patternLen = 12; 
   
   document.getElementById("easyBtn").classList.remove("lit");
@@ -61,7 +65,8 @@ function startGame(){
   guessCounter = 0;
   strikes = 0;
   gamePlaying = true; 
-  pattern = generatePattern(); 
+  generatePattern(); 
+  console.log(pattern);
     
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");

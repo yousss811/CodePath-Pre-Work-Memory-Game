@@ -21,8 +21,8 @@ p{
 
 /*Styling the general button parent class*/ 
 button{
-  background-color: blue; 
-  color: white;
+  background-color: turquoise; 
+  color: black;
   padding: 10px; 
   border-radius: 15px; 
 }
@@ -38,7 +38,7 @@ button{
   margin:10px
 }
 #easyBtn{
-  background-color: greenyellow; 
+  background-color: springgreen; 
 }
 #easyBtn.lit{
   background-color: darkgreen; 
