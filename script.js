@@ -4,11 +4,13 @@
 const CLUE_HOLD_TIME = 500;
 const CLUE_PAUSE_TIME = 333; 
 const NEXT_CLUE_WAIT_TIME = 500;
+const STRIKE_LIMIT = 3; 
 
 var pattern = [2,2,4,3,2,1,2,4]; 
 var progress = 0; 
 var gamePlaying = false;
 var guessCounter = 0; 
+var strikes = 0;
 
 var tonePlaying = false;
 var volume = .5; 
@@ -22,6 +24,8 @@ function clearButton(btn){
 
 function startGame(){
   progress = 0;
+  guessCounter = 0;
+  strikes = 0;
   gamePlaying = true; 
     
   document.getElementById("startBtn").classList.add("hidden");
@@ -68,16 +72,25 @@ function guess(btn){
     return; 
   }
   
-  if(pattern[guessCounter] = btn){
+  if(pattern[guessCounter] == btn){
       guessCounter +=1;
     }
-    else{
-      loseGame();
-    }
-  if(guessCounter == progress){
+  else{
+      if(strikes == STRIKE_LIMIT){
+        loseGame();
+      }
+      else{
+        strikes 
+      }
+      
+  }
+  if(guessCounter-1 == progress){
     progress += 1; 
     playClueSequence();
     guessCounter = 0;
+    if(progress == pattern.length){
+      winGame();
+    }
   }
   
   
