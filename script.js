@@ -5,9 +5,10 @@ const CLUE_HOLD_TIME = 500;
 const CLUE_PAUSE_TIME = 333; 
 const NEXT_CLUE_WAIT_TIME = 500;
 const STRIKE_LIMIT = 3; 
+const NUM_DIFFICULTIES = 3;
 
 var pattern;
-var patternLen = 8;
+var patternLen = 4;
 var progress = 0; 
 var gamePlaying = false;
 var guessCounter = 0; 
@@ -26,6 +27,26 @@ function clearButton(btn){
 function generatePattern(){
   for(let i = 0; i < patternLen; i++){
     
+  }
+}
+
+function changeDifficultyEasy(){
+  patternLen = 4; 
+}
+function changeDifficultyMedium(){
+  patternLen = 8; 
+}
+function changeDifficultyHard(){
+  patternLen = 12; 
+}
+function selectDifficulty(btnID){
+  for(let i =0; i<NUM_BUTTONS; i++){
+    if(i==btn){
+      document.getElementById(btnID).classList.add("lit");
+    }
+    else{
+      document.getElementById(btnID).classList.remove("lit");
+    } 
   }
 }
 
