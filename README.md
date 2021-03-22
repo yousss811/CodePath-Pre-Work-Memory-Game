@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![https://i.imgur.com/aMse5zz.gif]
+![](https://cdn.glitch.com/41857540-8f7c-47be-9860-f3e882700f4b%2FwalkthroughForCodePathIntern.gif?v=1616434226021)
 
 
 ## Reflection Questions
