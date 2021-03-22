@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![](your-link-here)
+![https://i.imgur.com/aMse5zz.gif]
 
 
 ## Reflection Questions
@@ -56,14 +56,14 @@ hardware rather than solutions such as Amazon AWS or other similar solutions.
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
 If I had more time to work on the project, I would first complete the rest of the optional features, such as the time limit. Since this project is being used as a learning project, what I like to do is read arbritary
-articles that have general relavence to the project I'm working on and use that as inpiration to add extra features to my project. For example, I was reaing an article on using Databases with web apps. Something that
-would be very interesting to add to this project would be a database that would store the highscore
+articles that have general relavence to the project I'm working on and use that as inpiration to add extra features to my project. For example, I was reaing an article on using Databases with web apps. Using this as
+my inspiration, I could implement a score system then store highscores in a database and use this information on a highscore tab on the web app. 
 
 
 
 ## License
 
-    Copyright [YOUR NAME]
+    Copyright Youssef Shoala
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
