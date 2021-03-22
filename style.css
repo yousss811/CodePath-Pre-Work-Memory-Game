@@ -44,27 +44,27 @@ button{
 #button1{
   background-color: palegreen;
 }
-#button1:active{
+#button1:active, #button1.lit{
   background-color: green; 
 }
 
 #button2{
   background-color: pink;
 }
-#button2:active{
+#button2:active, #button2.lit{
   background-color: darkred; 
 }
 
 #button3{
   background-color: lightblue;
 }
-#button3:active{
+#button3:active, #button3.lit{
   background-color: darkblue; 
 }
 
 #button4{
   background-color: lightyellow;
 }
-#button4:active{
+#button4:active, #button4.lit{
   background-color: olive; 
 }
