@@ -4,7 +4,7 @@ body {
   font-family: helvetica, arial, sans-serif;
   text-align: center; 
   margin: 2em;
-  background-color: lightblue; 
+  background-color: paleturquoise; 
 }
 
 h1 {
@@ -19,4 +19,38 @@ button{
   color: white;
   padding: 10px; 
   border-radius: 10px; 
+}
+#gameButtonArea > button{
+  width: 200px; 
+  height: 200px; 
+  margin:10px; 
+}
+
+
+#button1{
+  background-color: lightgreen;
+}
+#button1:active{
+  background-color: green; 
+}
+
+#button2{
+  background-color: pink;
+}
+#button2:active{
+  background-color: darkred; 
+}
+
+#button3{
+  background-color: lightblue;
+}
+#button3:active{
+  background-color: darkblue; 
+}
+
+#button4{
+  background-color: lightyellow;
+}
+#button4:active{
+  background-color: olive; 
 }
