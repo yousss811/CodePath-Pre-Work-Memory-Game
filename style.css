@@ -8,6 +8,6 @@ body {
 }
 
 h1 {
-  font-style: italic;
+  font_family: verdana, arial, sans_serif;
   color: #373fff;
 }
