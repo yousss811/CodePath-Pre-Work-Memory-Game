@@ -1,5 +1,6 @@
 /* CSS files add styling rules to your content */
 
+/*Styling the general body*/
 body {
   font-family: helvetica, arial, sans-serif;
   text-align: center; 
@@ -7,28 +8,38 @@ body {
   background-color: paleturquoise; 
 }
 
+/*Styling the title of the game*/
 h1 {
   font_family: verdana, arial, sans_serif;
   color: black;
 }
+
+/*Styling the description*/
 p{
   color: grey; 
 }
+
+/*Styling the general button parent class*/ 
 button{
   background-color: blue; 
   color: white;
   padding: 10px; 
   border-radius: 10px; 
 }
+
+
+/*Styleing the game buttons*/
+
+  /*General game button area*/
 #gameButtonArea > button{
   width: 200px; 
   height: 200px; 
   margin:10px; 
 }
 
-
+  /*Specific buttons*/
 #button1{
-  background-color: lightgreen;
+  background-color: palegreen;
 }
 #button1:active{
   background-color: green; 
