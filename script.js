@@ -6,7 +6,8 @@ const CLUE_PAUSE_TIME = 333;
 const NEXT_CLUE_WAIT_TIME = 500;
 const STRIKE_LIMIT = 3; 
 
-var pattern = [2,2,4,3,2,1,2,4]; 
+var pattern;
+var patternLen = 8;
 var progress = 0; 
 var gamePlaying = false;
 var guessCounter = 0; 
@@ -22,11 +23,18 @@ function clearButton(btn){
   document.getElementById("button"+btn).classList.remove("lit");
 }
 
+function generatePattern(){
+  for(let i = 0; i < patternLen; i++){
+    
+  }
+}
+
 function startGame(){
   progress = 0;
   guessCounter = 0;
   strikes = 0;
   gamePlaying = true; 
+  pattern = generatePattern(); 
     
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
@@ -41,7 +49,7 @@ function stopGame(){
 }
 function loseGame(){
   stopGame(); 
-  alert("Gamer Over. You lost.");
+  alert("Game Over. You lost.");
 }
 function winGame(){
   stopGame(); 
@@ -57,6 +65,7 @@ function playSingleClue(btn){
 }
 
 function playClueSequence(){
+  guessCounter = 0;
   let delay = NEXT_CLUE_WAIT_TIME; 
   for(let i=0; i<=progress; i++){
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
@@ -76,18 +85,19 @@ function guess(btn){
       guessCounter +=1;
     }
   else{
-      if(strikes == STRIKE_LIMIT){
+      if(strikes == STRIKE_LIMIT-1){
         loseGame();
       }
       else{
-        strikes 
+        strikes += 1; 
+        alert("Wrong order! You now have "+ strikes + " strikes!");
+        playClueSequence();
       }
       
   }
   if(guessCounter-1 == progress){
     progress += 1; 
     playClueSequence();
-    guessCounter = 0;
     if(progress == pattern.length){
       winGame();
     }

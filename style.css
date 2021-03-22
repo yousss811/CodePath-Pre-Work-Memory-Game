@@ -24,7 +24,7 @@ button{
   background-color: blue; 
   color: white;
   padding: 10px; 
-  border-radius: 10px; 
+  border-radius: 15px; 
 }
 .hidden {
   display: none;
@@ -32,6 +32,20 @@ button{
 
 
 /*Styleing the game buttons*/
+
+  /*Styling the difficulty buttons*/
+#difficultyChoice > button{
+  margin:10px
+}
+#easyBtn{
+  background-color: seagreen; 
+}
+#mediumBtn{
+  background-color: orange; 
+}
+#hardBtn{
+  background-color: orangered; 
+}
 
   /*General game button area*/
 #gameButtonArea > button{
