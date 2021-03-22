@@ -1,9 +1,9 @@
 /* If you're feeling fancy you can add interactivity 
     to your site with Javascript */
 
-const CLUE_HOLD_TIME = 1000;
+const CLUE_HOLD_TIME = 500;
 const CLUE_PAUSE_TIME = 333; 
-const NEXT_CLUE_WAIT_TIME = 1000;
+const NEXT_CLUE_WAIT_TIME = 500;
 
 var pattern = [2,2,4,3,2,1,2,4]; 
 var progress = 0; 
@@ -19,35 +19,6 @@ function lightButton(btn){
 function clearButton(btn){
   document.getElementById("button"+btn).classList.remove("lit");
 }
-
-function playSingleClue(btn){
-  if(gamePlaying){
-    lightButton(btn); 
-    playTone(btn, CLUE_HOLD_TIME);
-    setTimeout(clearButton, CLUE_HOLD_TIME, btn)
-  }
-}
-
-function playClueSequence(){
-  guessCounter = 0;
-  let delay = NEXT_CLUE_WAIT_TIME; 
-  for(let i=0; i<=progress; i++){
-    console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
-    setTimeout(playSingleClue, delay, pattern[i]); 
-    delay += CLUE_HOLD_TIME; 
-    delay += CLUE_PAUSE_TIME; 
-  }
-}
-
-function guess(btn){
-  console.log("User guessed: " + btn); 
-  if(!gamePlaying){
-    return; 
-  }
-  
-  
-}
-
 
 function startGame(){
   progress = 0;
@@ -72,6 +43,49 @@ function winGame(){
   stopGame(); 
   alert("Congrats! You won.");
 }
+
+function playSingleClue(btn){
+  if(gamePlaying){
+    lightButton(btn); 
+    playTone(btn, CLUE_HOLD_TIME);
+    setTimeout(clearButton, CLUE_HOLD_TIME, btn)
+  }
+}
+
+function playClueSequence(){
+  let delay = NEXT_CLUE_WAIT_TIME; 
+  for(let i=0; i<=progress; i++){
+    console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
+    setTimeout(playSingleClue, delay, pattern[i]); 
+    delay += CLUE_HOLD_TIME; 
+    delay += CLUE_PAUSE_TIME; 
+  }
+}
+
+function guess(btn){
+  console.log("User guessed: " + btn); 
+  if(!gamePlaying){
+    return; 
+  }
+  
+  if(pattern[guessCounter] = btn){
+      guessCounter +=1;
+    }
+    else{
+      loseGame();
+    }
+  if(guessCounter == progress){
+    progress += 1; 
+    playClueSequence();
+    guessCounter = 0;
+  }
+  
+  
+  
+}
+
+
+
 
 
 
