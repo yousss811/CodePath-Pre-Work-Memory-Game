@@ -17,7 +17,7 @@ var strikes = 0;
 var tonePlaying = false;
 var volume = .5; 
 
-function lightButton(btn){
+function lightButton(btn){ 
   document.getElementById("button"+btn).classList.add("lit");
 }
 function clearButton(btn){
@@ -27,7 +27,7 @@ function clearButton(btn){
 function generatePattern(){
   pattern = []
   for(let i = 0; i < patternLen; i++){
-    pattern.push(Math.floor(Math.random() * (NUM_BUTTONS - 1) + 1));
+    pattern.push(Math.floor(Math.random() * (NUM_BUTTONS) + 1));
   }
 }
 
