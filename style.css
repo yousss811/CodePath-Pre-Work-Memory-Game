@@ -2,12 +2,21 @@
 
 body {
   font-family: helvetica, arial, sans-serif;
+  text-align: center; 
   margin: 2em;
-  background-color: slategrey; 
-  color: white; 
+  background-color: lightblue; 
 }
 
 h1 {
   font_family: verdana, arial, sans_serif;
-  color: #373fff;
+  color: black;
+}
+p{
+  color: grey; 
+}
+button{
+  background-color: blue; 
+  color: white;
+  padding: 10px; 
+  border-radius: 10px; 
 }
