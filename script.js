@@ -32,23 +32,29 @@ function generatePattern(){
 
 function changeDifficultyEasy(){
   patternLen = 4; 
+  
+  document.getElementById('mediumBtn').classList.remove("lit");
+  document.getElementById('hardBtn').classList.remove("lit");
+  
+  document.getElementById('easyBtn').classList.add("lit");
 }
 function changeDifficultyMedium(){
   patternLen = 8; 
+  
+  document.getElementById("easyBtn").classList.remove("lit");
+  document.getElementById('hardBtn').classList.remove("lit");
+  
+  document.getElementById('mediumBtn').classList.add("lit");
 }
 function changeDifficultyHard(){
   patternLen = 12; 
+  
+  document.getElementById("easyBtn").classList.remove("lit");
+  document.getElementById('mediumBtn').classList.remove("lit");
+  
+  document.getElementById('hardBtn').classList.add("lit");
 }
-function selectDifficulty(btnID){
-  for(let i =0; i<NUM_BUTTONS; i++){
-    if(i==btn){
-      document.getElementById(btnID).classList.add("lit");
-    }
-    else{
-      document.getElementById(btnID).classList.remove("lit");
-    } 
-  }
-}
+
 
 function startGame(){
   progress = 0;

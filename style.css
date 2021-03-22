@@ -38,13 +38,22 @@ button{
   margin:10px
 }
 #easyBtn{
-  background-color: seagreen; 
+  background-color: greenyellow; 
+}
+#easyBtn.lit{
+  background-color: darkgreen; 
 }
 #mediumBtn{
-  background-color: orange; 
+  background-color: gold; 
+}
+#mediumBtn.lit{
+  background-color: sienna; 
 }
 #hardBtn{
   background-color: orangered; 
+}
+#hardBtn.lit{
+  background-color: maroon; 
 }
 
   /*General game button area*/
