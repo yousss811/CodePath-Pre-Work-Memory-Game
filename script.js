@@ -6,18 +6,17 @@ var progress = 0;
 var gamePlaying = false; 
 
 function startGame(){
-  alert('working');
   progress = 0;
   gamePlaying = true; 
     
-  document.getElementById("startBtn").classList.add("hidden"); 
-  document.getElementById("stopBtn").classList.remove("hidden"); 
+  document.getElementById("startBtn").style.visibility="hidden"; 
+  document.getElementById("stopBtn").style.visibility="visible"; 
 }
 
 function stopGame(){
   console.log("stopgame");
   gamePlaying = false;
   
-  document.getElementById("startBtn").classList.remove("hidden"); 
-  document.getElementById("stopBtn").classList.add("hidden"); 
+  document.getElementById("startBtn").style.visibility="visible"; 
+  document.getElementById("stopBtn").style.visibility="hidden"; 
 }
