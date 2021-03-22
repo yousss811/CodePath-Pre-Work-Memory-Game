@@ -6,17 +6,17 @@ var progress = 0;
 var gamePlaying = false; 
 
 function startGame(){
-  console.log("startgame");
+  alert('working');
   progress = 0;
   gamePlaying = true; 
-  
+    
   document.getElementById("startBtn").classList.add("hidden"); 
   document.getElementById("stopBtn").classList.remove("hidden"); 
 }
 
 function stopGame(){
   console.log("stopgame");
-  gamePlaying = false; 
+  gamePlaying = false;
   
   document.getElementById("startBtn").classList.remove("hidden"); 
   document.getElementById("stopBtn").classList.add("hidden"); 
